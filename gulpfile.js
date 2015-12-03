@@ -1,16 +1,17 @@
-var elixir = require('laravel-elixir');
+var elixir  = require('laravel-elixir'),
+    jade    = require('laravel-elixir-jade');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
+elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass([
+        'master.sass'
+    ], 'public/css/all.css');
+});
+
+elixir(function(mix) {
+    mix.jade({
+        search: '**/*.jade',
+        src: '/assets/jade/'
+    });
 });
