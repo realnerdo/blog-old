@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -29,3 +30,92 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: 'Varela Round', sans-serif; }
+
+.sidebar {
+  background: #ECF0F1;
+  width: 240px;
+  height: 100%;
+  padding: 1em; }
+  .sidebar .profile {
+    margin-bottom: 1.5em;
+    position: relative; }
+    .sidebar .profile:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .sidebar .profile .typcn {
+      position: absolute;
+      color: #5E778F;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-size: 20px; }
+    .sidebar .profile .photo {
+      overflow: hidden;
+      border-radius: 3px;
+      height: 36px;
+      width: 36px;
+      float: left;
+      margin-right: 0.5em; }
+      .sidebar .profile .photo .img {
+        width: 100%; }
+    .sidebar .profile .title {
+      font-size: 16px;
+      color: #34495E;
+      margin-bottom: 0.4em; }
+    .sidebar .profile .name {
+      font-size: 14px;
+      color: #5E778F; }
+  .sidebar .search {
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    position: relative;
+    margin-bottom: 1em; }
+    .sidebar .search .typcn {
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #5E778F; }
+    .sidebar .search input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: none;
+      border: none;
+      width: 100%;
+      padding: 0.5em 0.5em 0.5em 1.2em;
+      font-size: 16px; }
+  .sidebar .options .option .link {
+    display: inline-block;
+    color: #34495E;
+    text-decoration: none;
+    padding: 0.5em 0;
+    width: 100%;
+    border-radius: 3px; }
+    .sidebar .options .option .link .typcn {
+      color: #5E778F;
+      margin-right: 0.5em;
+      font-size: 20px; }
+    .sidebar .options .option .link:hover, .sidebar .options .option .link.active {
+      background: #3498DB;
+      color: white;
+      padding: 0.5em;
+      transition: all 0.3s ease; }
+      .sidebar .options .option .link:hover .typcn, .sidebar .options .option .link.active .typcn {
+        color: white; }

@@ -1,0 +1,72 @@
+.sidebar
+    background: $clouds
+    width: 240px
+    height: 100%
+    padding: 1em
+    .profile
+        +clear
+        margin-bottom: 1.5em
+        position: relative
+        .typcn
+            position: absolute
+            color: $light
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            font-size: 20px
+        .photo
+            overflow: hidden
+            border-radius: 3px
+            height: 36px
+            width: 36px
+            float: left
+            margin-right: 0.5em
+            .img
+                width: 100%
+        .title
+            font-size: 16px
+            color: $dark
+            margin-bottom: 0.4em
+        .name
+            font-size: 14px
+            color: $light
+    .search
+        width: 100%
+        background: white
+        border-radius: 3px
+        position: relative
+        margin-bottom: 1em
+        .typcn
+            position: absolute
+            top: 50%
+            left: 3px
+            transform: translateY(-50%)
+            font-size: 20px
+            color: $light
+        input
+            appearance: none
+            background: none
+            border: none
+            width: 100%
+            padding: 0.5em 0.5em 0.5em 1.2em
+            font-size: 16px
+    .options
+        .option
+            .link
+                display: inline-block
+                color: $dark
+                text-decoration: none
+                padding: 0.5em 0
+                width: 100%
+                border-radius: 3px
+                .typcn
+                    color: $light
+                    margin-right: 0.5em
+                    font-size: 20px
+                &:hover, &.active
+                    background: $blue
+                    color: white
+                    padding: 0.5em
+                    transition: all 0.3s ease
+                    .typcn
+                        color: white
