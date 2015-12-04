@@ -1,6 +1,8 @@
 .DS_Store
 /vendor
 /node_modules
+bower_components
+public/bower
 Homestead.yaml
 Homestead.json
 .env
