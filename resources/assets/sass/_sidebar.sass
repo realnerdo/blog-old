@@ -1,55 +1,60 @@
+$sidebar-width: em(240px)
 .sidebar
     background: $clouds
-    width: 240px
+    border-right: 2px solid $silver
+    width: $sidebar-width
     height: 100%
     padding: 1em
+    position: fixed
+    top: 0
+    left: 0
     .profile
         +clear
         margin-bottom: 1.5em
         position: relative
+        width: 100%
         .typcn
             position: absolute
             color: $light
             top: 50%
             right: 0
             transform: translateY(-50%)
-            font-size: 20px
+            +font-size(20px)
         .photo
             overflow: hidden
-            border-radius: 3px
-            height: 36px
-            width: 36px
+            border-radius: em(3px)
+            height: em(36px)
+            width: em(36px)
             float: left
             margin-right: 0.5em
             .img
                 width: 100%
         .title
-            font-size: 16px
+            +font-size(16px)
             color: $dark
-            margin-bottom: 0.4em
         .name
-            font-size: 14px
+            +font-size(14px)
             color: $light
     .search
         width: 100%
         background: white
-        border-radius: 3px
+        border-radius: em(3px)
         position: relative
         margin-bottom: 1em
         .typcn
             position: absolute
             top: 50%
-            left: 3px
+            left: rem(2px)
             transform: translateY(-50%)
-            font-size: 20px
+            +font-size(20px)
             color: $light
         input
             appearance: none
             background: none
             border: none
             width: 100%
-            padding: 0.5em 0.5em 0.5em 1.2em
-            font-size: 16px
+            padding: 0.5em 0.5em 0.5em 1.8em
+            +font-size(15px)
     .options
         .option
             .link
@@ -58,11 +63,12 @@
                 text-decoration: none
                 padding: 0.5em 0
                 width: 100%
-                border-radius: 3px
+                border-radius: em(3px)
+                +font-size(15px)
                 .typcn
                     color: $light
-                    margin-right: 0.5em
-                    font-size: 20px
+                    margin-right: 0.3em
+                    +font-size(20px)
                 &:hover, &.active
                     background: $blue
                     color: white

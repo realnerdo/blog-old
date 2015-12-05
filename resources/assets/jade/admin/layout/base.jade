@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        link(rel="stylesheet", href!="{{ asset('css/all.css') }}")
+        link(rel="stylesheet", href!="{{ asset('bower/typicons.font/src/font/typicons.min.css') }}")
+        link(rel="stylesheet", href!="{{ asset('bower/font-awesome/css/font-awesome.min.css') }}")
+        block title
+            title Admin
+    body
+        block sidebar
+            include ../partials/sidebar
+        block content
+        script(type="text/javascript", src!="{{ asset('js/all.js') }}")
+            

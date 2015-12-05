@@ -1,13 +1,4 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        link(rel="stylesheet", href!="{{ asset('css/all.css') }}")
-        link(rel="stylesheet", href!="{{ asset('bower/typicons.font/src/font/typicons.min.css') }}")
-        block title
-            title Admin
-    body
-        block sidebar
-            include partials/sidebar
-        block editor
-            include partials/editor
+extends layout/base
+
+block content
+    include partials/editor

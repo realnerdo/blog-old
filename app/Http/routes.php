@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('admin', function() {
     return view('admin.home');
 });
+
+Route::get('admin/content', function() {
+    return view('admin.content');
+});

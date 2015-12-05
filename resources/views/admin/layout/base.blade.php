@@ -25,7 +25,6 @@
         </ul>
       </nav>
     </aside>
-    <div class="editor">Editor</div>
     <script type="text/javascript" src="{{ asset('js/all.js') }}"></script>
   </body>
 </html>

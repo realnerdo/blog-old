@@ -12,7 +12,6 @@
     <ul class="options">
       <li class="option"><a href="#" class="link"> <span class="typcn typcn-pen"></span>New Post</a></li>
       <li class="option"><a href="#" class="link"> <span class="typcn typcn-document-text"></span>Content</a></li>
-      <li class="option"><a href="#" class="link"> <span class="typcn typcn-user"></span>Team</a></li>
       <li class="option"><a href="#" class="link"> <span class="typcn typcn-cog"></span>Settings</a></li>
     </ul>
   </nav>
