@@ -540,6 +540,7 @@
 
 /* Reset */
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Lato:400italic);
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -615,7 +616,7 @@ html {
 
 .btn {
   display: inline-block;
-  padding: 0.3em 0.5em;
+  padding: 0.3em 0.6em;
   color: white;
   border-radius: 0.2142857143em;
   font-size: 14px;
@@ -628,11 +629,8 @@ html {
 
 /* Animations */
 .sidebar {
-  background: #ECF0F1;
-  border-right: 2px solid #C2CFD0;
   width: 17.1428571429em;
   height: 100%;
-  padding: 1em;
   position: fixed;
   top: 0;
   left: 0; }
@@ -640,151 +638,150 @@ html {
     content: " ";
     display: table;
     clear: both;
-    margin-bottom: 1.5em;
+    width: 100%;
+    padding-left: 2em;
+    padding-bottom: 1em; }
+    .sidebar .profile .details {
+      border-bottom: 1px solid #ECF0F1;
+      position: relative;
+      padding-top: 2em;
+      padding-bottom: 2em; }
+      .sidebar .profile .details .photo {
+        float: left;
+        height: 2.5714285714rem;
+        width: 2.5714285714rem;
+        overflow: hidden;
+        border-radius: 0.2142857143rem;
+        margin-right: 1em; }
+        .sidebar .profile .details .photo .img {
+          width: 100%; }
+      .sidebar .profile .details .typcn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 20px;
+        font-size: 1.4285714286rem;
+        color: #6A8AAA; }
+      .sidebar .profile .details .title {
+        font-size: 14px;
+        font-size: 1rem;
+        color: #34495E;
+        margin-bottom: 0.3em; }
+      .sidebar .profile .details .name {
+        font-size: 13px;
+        font-size: 0.9285714286rem;
+        color: #6A8AAA; }
+  .sidebar .nav .options .option {
+    margin: 0.5em 0; }
+    .sidebar .nav .options .option .link {
+      display: block;
+      color: #34495E;
+      font-size: 14px;
+      font-size: 1rem;
+      padding: 0.5em 1em 0.5em 2.5em;
+      border-radius: 0 3px 3px 0;
+      transition: all 0.3s ease; }
+      .sidebar .nav .options .option .link:hover, .sidebar .nav .options .option .link.active {
+        background: #3498DB;
+        color: white;
+        transition: all 0.3s ease;
+        padding-left: 2.8em; }
+        .sidebar .nav .options .option .link:hover .typcn, .sidebar .nav .options .option .link.active .typcn {
+          color: white;
+          transition: all 0.3s ease; }
+      .sidebar .nav .options .option .link .typcn {
+        color: #6A8AAA;
+        font-size: 20px;
+        font-size: 1.4285714286rem;
+        margin-right: 0.5em; }
+
+.content {
+  margin-left: 17.1428571429em;
+  padding: 2em; }
+  .content .title {
+    font-size: 24px;
+    font-size: 1.7142857143rem;
+    color: #34495E;
+    margin-bottom: 1em; }
+  .content .tools {
+    content: " ";
+    display: table;
+    clear: both;
+    border-bottom: 1px solid #ECF0F1;
+    width: 100%;
+    margin-bottom: 1em; }
+    .content .tools .tabs {
+      content: " ";
+      display: table;
+      clear: both;
+      float: left; }
+      .content .tools .tabs .tab {
+        float: left; }
+        .content .tools .tabs .tab .link {
+          display: block;
+          padding: 0 1em 0.5em 1em; }
+          .content .tools .tabs .tab .link.active {
+            color: #3498DB;
+            border-bottom: 3px solid #3498DB; }
+    .content .tools .search {
+      float: right;
+      padding: 0 1em;
+      border-bottom: 3px solid #ECF0F1; }
+      .content .tools .search .typcn {
+        color: #6A8AAA;
+        font-size: 20px;
+        font-size: 1.4285714286rem; }
+      .content .tools .search input {
+        border: 0;
+        color: #6A8AAA; }
+  .content .posts .post {
     position: relative;
-    width: 100%; }
-    .sidebar .profile .typcn {
+    border-bottom: 1px solid #ECF0F1;
+    padding: 1em 0;
+    transition: all 0.3s ease; }
+    .content .posts .post:hover {
+      padding-left: 0.3em;
+      transition: all 0.3s ease; }
+      .content .posts .post:hover .options {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        padding-right: 0.5em;
+        transition: all 0.3s ease; }
+    .content .posts .post .date {
+      font-size: 12px;
+      font-size: 0.8571428571rem;
+      color: #95A5A6; }
+    .content .posts .post .title {
+      display: inline-block;
+      font-size: 18px;
+      font-size: 1.2857142857rem;
+      margin: 0.5em 0; }
+    .content .posts .post .details {
+      font-family: 'Lato';
+      font-style: italic;
+      color: #95A5A6; }
+      .content .posts .post .details a {
+        color: #6A8AAA; }
+    .content .posts .post .options {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      content: " ";
+      display: table;
+      clear: both;
       position: absolute;
-      color: #5E778F;
       top: 50%;
       right: 0;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
-      font-size: 20px;
-      font-size: 1.4285714286rem; }
-    .sidebar .profile .photo {
-      overflow: hidden;
-      border-radius: 0.2142857143em;
-      height: 2.5714285714em;
-      width: 2.5714285714em;
-      float: left;
-      margin-right: 0.5em; }
-      .sidebar .profile .photo .img {
-        width: 100%; }
-    .sidebar .profile .title {
-      font-size: 16px;
-      font-size: 1.1428571429rem;
-      color: #34495E; }
-    .sidebar .profile .name {
-      font-size: 14px;
-      font-size: 1rem;
-      color: #5E778F; }
-  .sidebar .search {
-    width: 100%;
-    background: white;
-    border-radius: 0.2142857143em;
-    position: relative;
-    margin-bottom: 1em; }
-    .sidebar .search .typcn {
-      position: absolute;
-      top: 50%;
-      left: 0.1428571429rem;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      font-size: 20px;
-      font-size: 1.4285714286rem;
-      color: #5E778F; }
-    .sidebar .search input {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background: none;
-      border: none;
-      width: 100%;
-      padding: 0.5em 0.5em 0.5em 1.8em;
-      font-size: 15px;
-      font-size: 1.0714285714rem; }
-  .sidebar .options .option .link {
-    display: inline-block;
-    color: #34495E;
-    text-decoration: none;
-    padding: 0.5em 0;
-    width: 100%;
-    border-radius: 0.2142857143em;
-    font-size: 15px;
-    font-size: 1.0714285714rem; }
-    .sidebar .options .option .link .typcn {
-      color: #5E778F;
-      margin-right: 0.3em;
-      font-size: 20px;
-      font-size: 1.4285714286rem; }
-    .sidebar .options .option .link:hover, .sidebar .options .option .link.active {
-      background: #3498DB;
-      color: white;
-      padding: 0.5em;
       transition: all 0.3s ease; }
-      .sidebar .options .option .link:hover .typcn, .sidebar .options .option .link.active .typcn {
-        color: white; }
-
-.content {
-  content: " ";
-  display: table;
-  clear: both;
-  height: 100%;
-  width: 100%;
-  padding-left: 17.1428571429em; }
-  .content .posts {
-    width: 18.5714285714em;
-    border-right: 2px solid #C2CFD0;
-    height: 100vh;
-    float: left;
-    overflow-y: auto; }
-    .content .posts .post .link {
-      display: block;
-      padding: 1em;
-      border-bottom: 2px solid #C2CFD0; }
-      .content .posts .post .link .details {
-        content: " ";
-        display: table;
-        clear: both;
-        position: relative;
-        width: 100%; }
-        .content .posts .post .link .details .tags {
-          float: left;
-          width: 50%;
-          content: " ";
-          display: table;
-          clear: both; }
-          .content .posts .post .link .details .tags .tag {
-            float: left;
-            padding: 0.2em 0.3em;
-            background: #1ABC9C;
-            color: white;
-            border-radius: 0.2142857143em;
-            text-transform: uppercase;
-            font-size: 11px;
-            font-size: 0.7857142857rem;
-            margin-right: 0.3em; }
-            .content .posts .post .link .details .tags .tag.draft {
-              background: #9B59B6; }
-        .content .posts .post .link .details .date {
-          float: right;
-          width: 50%;
-          font-size: 12px;
-          font-size: 0.8571428571rem;
-          color: #C2CFD0;
-          text-align: right; }
-      .content .posts .post .link .title {
-        margin: 0.5em 0;
-        color: #34495E;
-        font-size: 14px;
-        font-size: 1rem; }
-      .content .posts .post .link:hover, .content .posts .post .link.active {
-        background: #3498DB;
-        transition: all 0.3s ease; }
-        .content .posts .post .link:hover .title, .content .posts .post .link.active .title {
-          color: white; }
-  .content .preview {
-    float: right;
-    padding: 1em 5em 1em 5em;
-    width: calc(100% - 18.5714285714em);
-    height: 100vh;
-    overflow-y: auto; }
-    .content .preview .options {
-      content: " ";
-      display: table;
-      clear: both;
-      width: 100%;
-      margin-bottom: 1em; }
-      .content .preview .options .btn {
-        float: right; }
+      .content .posts .post .options .option {
+        float: left;
+        margin-left: 1em; }
+        .content .posts .post .options .option .link {
+          color: #6A8AAA;
+          font-size: 20px;
+          font-size: 1.4285714286rem; }
+          .content .posts .post .options .option .link.delete {
+            color: #E74C3C; }

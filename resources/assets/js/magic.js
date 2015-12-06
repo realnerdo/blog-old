@@ -1,7 +1,10 @@
 $(function(){
-    var editor = new MediumEditor('.editable');
 
-    $('.editable').mediumInsert({
-        editor: editor
-    });
+    var $body = $('body');
+
+
+
+    // $('.editable').mediumInsert({
+    //     editor: editor
+    // });
 });

@@ -2,98 +2,51 @@ extends layout/base
 
 block content
     .content
+        h1.title Your posts
+        .tools
+            ul.tabs
+                li.tab
+                    a.link.active(href="#") Drafts
+                li.tab
+                    a.link(href="#") Published
+            .search
+                span.typcn.typcn-zoom
+                input(type="search", name="s", placeholder="Search...")
         ul.posts
             li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                            li.tag.draft Draft
-                        .date 2/10/2015
-                    .title The Amazing Spider-Man
+                .date 2/12/2015
+                a.title(href="") This is an amazing post
+                .details
+                    | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
+                ul.options
+                    li.option
+                        a.link.edit(href="")
+                            span.typcn.typcn-edit
+                    li.option
+                        a.link.delete(href="")
+                            span.typcn.typcn-trash
             li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                            li.tag.draft Draft
-                        .date 2/10/2015
-                    .title The awesome art of origami
+                .date 2/12/2015
+                a.title(href="") This is an amazing post
+                .details
+                    | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
+                ul.options
+                    li.option
+                        a.link.edit(href="")
+                            span.typcn.typcn-edit
+                    li.option
+                        a.link.delete(href="")
+                            span.typcn.typcn-trash
             li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title This is an incredible long title for a post
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                            li.tag.draft Draft
-                        .date 2/10/2015
-                    .title My trip to Asia
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title Stay hungry, stay foolish
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                            li.tag.draft Draft
-                        .date 2/10/2015
-                    .title This is my legacy
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title The Amazing Spider-Man
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title The awesome art of origami
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title This is an incredible long title for a post
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title My trip to Asia
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                        .date 2/10/2015
-                    .title Stay hungry, stay foolish
-            li.post
-                a.link(href="#") 
-                    .details
-                        ul.tags
-                            li.tag Life
-                            li.tag.draft Draft
-                        .date 2/10/2015
-                    .title This is my legacy
-        .preview
-            .options
-                a(href="#").btn.blue Edit
-            .body.editable
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .date 2/12/2015
+                a.title(href="") This is an amazing post
+                .details
+                    | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
+                ul.options
+                    li.option
+                        a.link.edit(href="")
+                            span.typcn.typcn-edit
+                    li.option
+                        a.link.delete(href="")
+                            span.typcn.typcn-trash
+        

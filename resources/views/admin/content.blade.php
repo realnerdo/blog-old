@@ -10,129 +10,57 @@
   <body>
     <aside class="sidebar">
       <div class="profile">
-        <div class="photo"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/48.jpg" class="img"></div>
-        <div class="title">Personal Blog</div>
-        <div class="name">Brenda Graham</div><span class="typcn typcn-arrow-sorted-down"></span>
-      </div>
-      <div class="search"><span class="typcn typcn-zoom"></span>
-        <input type="search" name="s" placeholder="Buscar...">
+        <div class="details">
+          <div class="photo"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/48.jpg" class="img"></div>
+          <div class="title">Personal Blog</div>
+          <div class="name">Brenda Graham</div><span class="typcn typcn-arrow-sorted-down"></span>
+        </div>
       </div>
       <nav class="nav">
         <ul class="options">
           <li class="option"><a href="#" class="link"> <span class="typcn typcn-pen"></span>New Post</a></li>
-          <li class="option"><a href="#" class="link"> <span class="typcn typcn-document-text"></span>Content</a></li>
+          <li class="option"><a href="#" class="link active"><span class="typcn typcn-document-text"></span>Content</a></li>
           <li class="option"><a href="#" class="link"> <span class="typcn typcn-cog"></span>Settings</a></li>
         </ul>
       </nav>
     </aside>
     <div class="content">
-      <ul class="posts">
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-                <li class="tag draft">Draft</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">The Amazing Spider-Man</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-                <li class="tag draft">Draft</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">The awesome art of origami</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">This is an incredible long title for a post</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-                <li class="tag draft">Draft</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">My trip to Asia</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">Stay hungry, stay foolish</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-                <li class="tag draft">Draft</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">This is my legacy</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">The Amazing Spider-Man</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">The awesome art of origami</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">This is an incredible long title for a post</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">My trip to Asia</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">Stay hungry, stay foolish</div></a></li>
-        <li class="post"><a href="#" class="link"> 
-            <div class="details">
-              <ul class="tags">
-                <li class="tag">Life</li>
-                <li class="tag draft">Draft</li>
-              </ul>
-              <div class="date">2/10/2015</div>
-            </div>
-            <div class="title">This is my legacy</div></a></li>
-      </ul>
-      <div class="preview">
-        <div class="options"><a href="#" class="btn blue">Edit</a></div>
-        <div class="body editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <h1 class="title">Your posts</h1>
+      <div class="tools">
+        <ul class="tabs">
+          <li class="tab"><a href="#" class="link active">Drafts</a></li>
+          <li class="tab"><a href="#" class="link">Published</a></li>
+        </ul>
+        <div class="search"><span class="typcn typcn-zoom"></span>
+          <input type="search" name="s" placeholder="Search...">
+        </div>
       </div>
+      <ul class="posts">
+        <li class="post">
+          <div class="date">2/12/2015</div><a href="" class="title">This is an amazing post</a>
+          <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
+          <ul class="options">
+            <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
+            <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
+          </ul>
+        </li>
+        <li class="post">
+          <div class="date">2/12/2015</div><a href="" class="title">This is an amazing post</a>
+          <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
+          <ul class="options">
+            <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
+            <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
+          </ul>
+        </li>
+        <li class="post">
+          <div class="date">2/12/2015</div><a href="" class="title">This is an amazing post</a>
+          <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
+          <ul class="options">
+            <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
+            <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <script type="text/javascript" src="{{ asset('js/all.js') }}"></script>
   </body>

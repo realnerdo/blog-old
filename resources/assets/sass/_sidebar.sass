@@ -1,78 +1,65 @@
 $sidebar-width: em(240px)
 .sidebar
-    background: $clouds
-    border-right: 2px solid $silver
     width: $sidebar-width
     height: 100%
-    padding: 1em
     position: fixed
     top: 0
     left: 0
     .profile
         +clear
-        margin-bottom: 1.5em
-        position: relative
         width: 100%
-        .typcn
-            position: absolute
-            color: $light
-            top: 50%
-            right: 0
-            transform: translateY(-50%)
-            +font-size(20px)
-        .photo
-            overflow: hidden
-            border-radius: em(3px)
-            height: em(36px)
-            width: em(36px)
-            float: left
-            margin-right: 0.5em
-            .img
-                width: 100%
-        .title
-            +font-size(16px)
-            color: $dark
-        .name
-            +font-size(14px)
-            color: $light
-    .search
-        width: 100%
-        background: white
-        border-radius: em(3px)
-        position: relative
-        margin-bottom: 1em
-        .typcn
-            position: absolute
-            top: 50%
-            left: rem(2px)
-            transform: translateY(-50%)
-            +font-size(20px)
-            color: $light
-        input
-            appearance: none
-            background: none
-            border: none
-            width: 100%
-            padding: 0.5em 0.5em 0.5em 1.8em
-            +font-size(15px)
-    .options
-        .option
-            .link
-                display: inline-block
+        padding:
+            left: 2em
+            bottom: 1em
+        .details
+            border-bottom: 1px solid $clouds
+            position: relative
+            padding:
+                top: 2em
+                bottom: 2em
+            .photo
+                float: left
+                height: rem(36px)
+                width: rem(36px)
+                overflow: hidden
+                border-radius: rem(3px)
+                margin-right: 1em
+                .img
+                    width: 100%
+            .typcn
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                +font-size(20px)
+                color: $light
+            .title
+                +font-size(14px)
                 color: $dark
-                text-decoration: none
-                padding: 0.5em 0
-                width: 100%
-                border-radius: em(3px)
-                +font-size(15px)
-                .typcn
-                    color: $light
-                    margin-right: 0.3em
-                    +font-size(20px)
-                &:hover, &.active
-                    background: $blue
-                    color: white
-                    padding: 0.5em
+                margin-bottom: 0.3em
+            .name
+                +font-size(13px)
+                color: $light
+    .nav
+        .options
+            .option
+                margin: 0.5em 0
+                .link
+                    display: block
+                    color: $dark
+                    +font-size(14px)
+                    padding: 0.5em 1em 0.5em 2.5em
+                    border-radius: 0 3px 3px 0
                     transition: all 0.3s ease
-                    .typcn
+                    &:hover, &.active
+                        background: $blue
                         color: white
+                        transition: all 0.3s ease
+                        padding-left: 2.8em
+                        .typcn
+                            color: white
+                            transition: all 0.3s ease
+                    .typcn
+                        color: $light
+                        +font-size(20px)
+                        margin-right: 0.5em

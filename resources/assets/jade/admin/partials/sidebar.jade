@@ -1,13 +1,11 @@
 aside.sidebar
     .profile
-        .photo
-            img.img(src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/48.jpg")
-        .title Personal Blog
-        .name Brenda Graham
-        span.typcn.typcn-arrow-sorted-down
-    .search
-        span.typcn.typcn-zoom
-        input(type="search", name="s", placeholder="Buscar...")
+        .details
+            .photo
+                img.img(src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/48.jpg")
+            .title Personal Blog
+            .name Brenda Graham
+            span.typcn.typcn-arrow-sorted-down
     nav.nav
         ul.options
             li.option
@@ -15,13 +13,9 @@ aside.sidebar
                     span.typcn.typcn-pen
                     | New Post
             li.option
-                a.link(href="#") 
+                a.link.active(href="#")
                     span.typcn.typcn-document-text
                     | Content
-            //- li.option
-            //-     a.link(href="#") 
-            //-         span.typcn.typcn-user
-            //-         | Team
             li.option
                 a.link(href="#") 
                     span.typcn.typcn-cog
