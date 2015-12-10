@@ -22,3 +22,11 @@ Route::get('admin', function() {
 Route::get('admin/content', function() {
     return view('admin.content');
 });
+
+Route::get('admin/editor', function() {
+    return view('admin.editor');
+});
+
+Route::post('admin/test', function(){
+    return Request::all('title');
+});

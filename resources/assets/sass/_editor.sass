@@ -1,0 +1,56 @@
+.editor
+    width: rem(800px)
+    margin: 0 auto
+    .title
+        border-bottom: 1px solid $clouds
+        .options
+            float: right
+            margin-bottom: 0.5em
+            .settings
+                +font-size(26px)
+                color: $light
+                position: relative
+                top: rem(3px)
+                transition: all 0.3s ease
+                &:hover
+                    opacity: 0.8
+                    transition: all 0.3s ease
+        #input-title
+            border: 0
+            +font-size(24px)
+            color: $dark
+            width: 100%
+            padding-bottom: 0.5em
+            font-family: 'Lora', Georgia, serif
+    .body
+        padding-top: 2em
+        .editable
+            border: 0
+            width: 100%
+            resize: none
+            color: $dark
+            font-family: 'Lora', Georgia, serif
+            +font-size(18px)
+            line-height: 1.5em
+            // Titles
+            +headings
+            // Blockquotes
+            blockquote
+                color: $light
+                +font-size(20px)
+                padding-left: 0.5em
+                border-left: 3px solid $clouds
+            // Lists
+            ol, ul
+                padding-left: 1em
+            ol
+                list-style: decimal
+            ul
+                list-style: disc
+            // Fix spans
+            p
+                span[style]
+                    font-size: inherit!important
+                    line-height: inherit!important
+            &:hover
+                cursor: text

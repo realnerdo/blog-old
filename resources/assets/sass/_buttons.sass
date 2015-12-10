@@ -1,11 +1,20 @@
 .btn
     display: inline-block
-    padding: 0.3em 0.6em
+    padding: 0.4em 0.8em
     color: white
+    border: 0
     border-radius: em(3px)
-    +font-size(14px)
-    text-transform: uppercase
+    +font-size(15px)
+    position: relative
+    &:hover
+        cursor: pointer
+        opacity: 0.8
+        transition: all 0.3s ease
     &.blue
         background: $blue
+        &:active
+            background: darken($blue, 15)
     &.green
         background: $green
+        &:active
+            background: darken($green, 15)

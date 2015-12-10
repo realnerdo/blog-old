@@ -1,0 +1,86 @@
+.form
+    .group
+        margin-bottom: 1.5em
+        +clear
+        width: 100%
+        .label
+            // display: block
+            +font-size(13px)
+            color: $dark
+            text-transform: uppercase
+        .input
+            border: 2px solid $silver
+            border-radius: rem(3px)
+            padding: 0.5em 0.8em
+            width: 100%
+            +font-size(16px)
+            resize: none
+            &:focus
+                border: 2px solid $blue
+                transition: all 0.3s ease
+        .file
+            margin-top: 0.5em
+        .img-preview
+            width: 100%
+            border-radius: rem(3px)
+            box-shadow: 0 0 3px 1px rgba(black, 0.2)
+            margin-top: 1em
+        .onoffswitch-styled
+            float: right
+            position: relative
+            width: rem(35px)
+            user-select:none
+            .onoffswitch
+                display: none
+                &:checked + .onoffswitch-label
+                    background-color: $green
+                &:checked + .onoffswitch-label, &:checked + .onoffswitch-label:before
+                    border-color: $green
+                &:checked + .onoffswitch-label:before
+                    right: 0
+            .onoffswitch-label
+                display: block
+                overflow: hidden
+                cursor: pointer
+                height: rem(20px)
+                padding: 0
+                line-height: rem(20px)
+                border: 2px solid $silver
+                border-radius: rem(20px)
+                background: white
+                transition: background-color 0.1s ease-in
+                &:before
+                    content: ""
+                    display: block
+                    width: rem(20px)
+                    margin: 0
+                    background: white
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    right: rem(15px)
+                    border: 2px solid $silver
+                    border-radius: rem(20px)
+                    transition: all 0.1s ease-in 0s
+
+        .select-styled
+            position: relative
+            .typcn
+                position: absolute
+                top: 50%
+                right: 0.3em
+                transform: translateY(-50%)
+                +font-size(18px)
+                color: $light
+                pointer-events: none
+            .select
+                background: transparent
+                background-image: url(../img/select-down.png) no-repeat right
+                width: 100%
+                padding: 0.5em
+                +font-size(16px)
+                line-height: 1
+                border: 2px solid $silver
+                border-radius: rem(3px)
+                height: rem(34px)
+                -webkit-appearance: none

@@ -23,6 +23,7 @@ elixir(function(mix) {
 elixir(function(mix) {
     mix.scripts([
         '../../../public/bower/jquery/dist/jquery.min.js',
+        '../../../public/bower/autosize/dist/autosize.min.js',
         '../../../public/bower/medium-editor/dist/js/medium-editor.min.js',
         '../../../public/bower/handlebars/handlebars.runtime.min.js',
         '../../../public/bower/jquery-sortable/source/js/jquery-sortable-min.js',

@@ -1,0 +1,27 @@
+.content
+    .tools
+        +clear
+        border-bottom: 1px solid $clouds
+        width: 100%
+        margin-bottom: 1em
+        .tabs
+            +clear
+            float: left
+            .tab
+                float: left
+                .link
+                    display: block
+                    padding: 0 1em 0.5em 1em
+                    &.active
+                        color: $blue
+                        border-bottom: 3px solid $blue
+        .search
+            float: right
+            padding: 0 1em
+            border-bottom: 3px solid $clouds
+            .typcn
+                color: $light
+                +font-size(20px)
+            input
+                border: 0
+                color: $light

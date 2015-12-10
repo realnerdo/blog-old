@@ -11,6 +11,16 @@
     @media only screen and ($size)
         @content
 
+=heading-size($size, $step-size-heading: 0.3333, $amplifier-heading: 1.2)
+    font-size: $size * $step-size-heading * $amplifier-heading + rem
+
+=headings
+    @for $i from 1 through 6
+        h#{$i}
+            +heading-size(7 - $i)
+            margin: 0.5em 0
+            line-height: 1.3
+
 =clear
     content: " "
     display: table
