@@ -19,14 +19,12 @@ Route::get('admin', function() {
     return view('admin.home');
 });
 
-Route::get('admin/content', function() {
-    return view('admin.content');
-});
+Route::get('admin/content', 'ArticlesController@index');
 
-Route::get('admin/editor', function() {
-    return view('admin.editor');
-});
+Route::get('admin/editor', 'ArticlesController@create');
 
-Route::post('admin/test', function(){
-    return Request::all('title');
+Route::post('admin/store', 'ArticlesController@store');
+
+Route::get('admin/getTags', function(){
+    return \App\Tag::all();
 });

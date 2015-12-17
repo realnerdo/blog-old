@@ -36,30 +36,18 @@
         </div>
       </div>
       <ul id="drafts" class="posts active tabbed">
-        <li class="post">
-          <div class="date">2/12/2015</div><a href="" class="title">This is an amazing post</a>
-          <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
-          <ul class="options">
-            <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
-            <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
-          </ul>
-        </li>
-        <li class="post">
-          <div class="date">2/12/2015</div><a href="" class="title">This is an amazing post</a>
-          <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
-          <ul class="options">
-            <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
-            <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
-          </ul>
-        </li>
-        <li class="post">
-          <div class="date">2/12/2015</div><a href="" class="title">This is an amazing post</a>
-          <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
-          <ul class="options">
-            <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
-            <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
-          </ul>
-        </li>
+@foreach($articles as $article)
+   
+                <li class="post">
+                  <div class="date">{{ $article->published_at->diffForHumans() }}</div><a href="" class="title">{{ $article->title }}</a>
+                  <div class="details">By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a></div>
+                  <ul class="options">
+                    <li class="option"><a href="" class="link edit"><span class="typcn typcn-edit"></span></a></li>
+                    <li class="option"><a href="" class="link delete"><span class="typcn typcn-trash"></span></a></li>
+                  </ul>
+                </li>
+@endforeach
+
       </ul>
       <ul id="published" class="posts tabbed">
         <li class="post">

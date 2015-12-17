@@ -24,17 +24,14 @@
         </ul>
       </nav>
     </aside>
-    <div class="content">{!! Form::open(['url' => url('admin/test'), 'class' => 'form']) !!}
+    <div class="content">{!! Form::open(['url' => url('admin/store'), 'class' => 'form', 'files' => true]) !!}
       <div class="editor">
         <div class="title">
           <div class="options"><a href="#" class="settings open-panel"><span class="typcn typcn-cog"></span></a>
             <input type="submit" value="Publish" class="btn blue publish">
-          </div>
-          <input id="input-title" type="text" name="title" placeholder="Your post title">
+          </div>{!! Form::text('title', null, ['placeholder' => 'Your article title', 'id' => 'input-title']) !!}
         </div>
-        <div class="body">
-          <textarea name="body" class="editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-        </div>
+        <div class="body">{!! Form::textarea('body', null, ['class' => 'editable']) !!}</div>
       </div>
       <div class="panel page-settings">
         <h2 class="title">Page Settings
@@ -45,10 +42,18 @@
           {!! Form::file('cover', ['class' => 'file img']) !!}
         </div>
         <div class="group">
+          {!! Form::label('tags', 'Tags', ['class' => 'label']) !!}
+          {!! Form::select('tags[]', ($tags ? $tags : null), null, ['class' => 'select2', 'multiple' => true]) !!}
+        </div>
+        <div class="group">
+          {!! Form::label('published_at', 'Publish date') !!}
+          {!! Form::text('published_at', \Carbon\Carbon::now('America/Mexico_City')->format('d-m-Y h:m:s A'), ['data-field' => 'datetime', 'readonly' => true, 'class' => 'input']) !!}
+        </div>
+        <div class="group">
           {!! Form::label('twitter', 'Post to twitter', ['class' => 'label']) !!}
           {!! Form::checkbox('twitter', 1, null, ['class' => 'onoffswitch']) !!}
+          <div id="dtBox"></div>
         </div>
-        <div class="group">{!! Form::select('age', ['Under 18', '19 to 30', 'Over 30'], null, ['class' => 'select']) !!}</div>
       </div>{!! Form::close() !!}
     </div>
     <script type="text/javascript" src="{{ asset('js/all.js') }}"></script>

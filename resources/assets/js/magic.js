@@ -28,7 +28,7 @@ $(function(){
                 images: {
                     label: '<span class="typcn typcn-camera"></span>',
                     // fileUploadOptions: { // (object) File upload configuration. See https://github.com/blueimp/jQuery-File-Upload/wiki/Options
-                    //     url: 'upload.php', // (string) A relative path to an upload script
+                    //     url: 'uploadFile', // (string) A relative path to an upload script
                     //     acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i // (regexp) Regexp of accepted file types
                     // },
                     // deleteScript: 'delete.php',
@@ -127,5 +127,30 @@ $(function(){
             class: 'onoffswitch-label',
             for: onoffswitch.attr('id')
         }));
+    }
+
+    /* Datetime field */
+    var dtBox = $("#dtBox");
+    if(dtBox.length){
+        dtBox.DateTimePicker({
+            dateTimeFormat: "dd-MM-yyyy hh:mm:ss AA",
+            shortDayNames: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+            fullDayNames: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+            shortMonthNames: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+            fullMonthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            titleContentDateTime: "Fecha de publicación",
+            setButtonContent: "Aceptar",
+            clearButtonContent: "Borrar",
+            minDateTime: new Date().format('dd-mm-yyyy hh:mm:ss TT')
+        });
+    }
+
+    /* Select2 */
+    var selects2 = $('.select2');
+    if(selects2.length){
+        selects2.select2({
+            width: '100%',
+            tags: true
+        });
     }
 });

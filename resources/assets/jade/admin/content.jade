@@ -13,42 +13,45 @@ block content
                 span.typcn.typcn-zoom
                 input(type="search", name="s", placeholder="Search...")
         ul.posts.active.tabbed#drafts
-            li.post
-                .date 2/12/2015
-                a.title(href="") This is an amazing post
-                .details
-                    | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
-                ul.options
-                    li.option
-                        a.link.edit(href="")
-                            span.typcn.typcn-edit
-                    li.option
-                        a.link.delete(href="")
-                            span.typcn.typcn-trash
-            li.post
-                .date 2/12/2015
-                a.title(href="") This is an amazing post
-                .details
-                    | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
-                ul.options
-                    li.option
-                        a.link.edit(href="")
-                            span.typcn.typcn-edit
-                    li.option
-                        a.link.delete(href="")
-                            span.typcn.typcn-trash
-            li.post
-                .date 2/12/2015
-                a.title(href="") This is an amazing post
-                .details
-                    | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
-                ul.options
-                    li.option
-                        a.link.edit(href="")
-                            span.typcn.typcn-edit
-                    li.option
-                        a.link.delete(href="")
-                            span.typcn.typcn-trash
+            
+            include ../mixins/blade
+            +foreach('$articles as $article')    
+                li.post
+                    .date {{ $article->published_at->diffForHumans() }}
+                    a.title(href="") {{ $article->title }}
+                    .details
+                        | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
+                    ul.options
+                        li.option
+                            a.link.edit(href="")
+                                span.typcn.typcn-edit
+                        li.option
+                            a.link.delete(href="")
+                                span.typcn.typcn-trash
+            //- li.post
+            //-     .date 2/12/2015
+            //-     a.title(href="") This is an amazing post
+            //-     .details
+            //-         | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
+            //-     ul.options
+            //-         li.option
+            //-             a.link.edit(href="")
+            //-                 span.typcn.typcn-edit
+            //-         li.option
+            //-             a.link.delete(href="")
+            //-                 span.typcn.typcn-trash
+            //- li.post
+            //-     .date 2/12/2015
+            //-     a.title(href="") This is an amazing post
+            //-     .details
+            //-         | By <a href="#">Asael Jaimes</a> · Filed under <a href="#">Web Design</a>
+            //-     ul.options
+            //-         li.option
+            //-             a.link.edit(href="")
+            //-                 span.typcn.typcn-edit
+            //-         li.option
+            //-             a.link.delete(href="")
+            //-                 span.typcn.typcn-trash
             
         ul.posts.tabbed#published
             li.post

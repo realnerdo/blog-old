@@ -146,6 +146,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Illuminate\Html\HtmlServiceProvider::class,
+        Thujohn\Twitter\TwitterServiceProvider::class,
 
     ],
 
@@ -195,7 +196,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Illuminate\Html\FormFacade::class,
-        'HTML'      => Illuminate\Html\HtmlFacade::class
+        'HTML'      => Illuminate\Html\HtmlFacade::class,
+        'Twitter'   => Thujohn\Twitter\Facades\Twitter::class,
 
     ],
 

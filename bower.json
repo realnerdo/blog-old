@@ -25,6 +25,7 @@
     "medium-editor": "~5.10.0",
     "font-awesome": "~4.5.0",
     "medium-editor-insert-plugin": "^2.1",
-    "autosize": "jquery-autosize#~3.0.14"
+    "autosize": "jquery-autosize#~3.0.14",
+    "datetimepicker": "curioussolutions-datetimepicker#~0.1.25"
   }
 }

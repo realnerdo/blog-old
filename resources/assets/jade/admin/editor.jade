@@ -2,26 +2,31 @@ extends layout/base
 
 block content
     .content
-        | {!! Form::open(['url' => url('admin/test'), 'class' => 'form']) !!}
+        | {!! Form::open(['url' => url('admin/store'), 'class' => 'form', 'files' => true]) !!}
         .editor
             .title
                 .options
                     a(href="#").settings.open-panel
                         span.typcn.typcn-cog
                     input(type="submit", value="Publish").btn.blue.publish
-                input#input-title(type="text", name="title", placeholder="Your post title")
+                | {!! Form::text('title', null, ['placeholder' => 'Your article title', 'id' => 'input-title']) !!}
             .body
-                textarea.editable(name="body") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                | {!! Form::textarea('body', null, ['class' => 'editable']) !!}
         .panel.page-settings
             h2.title Page Settings
                 button.btn.green.close-panel Close
             .group
-                {!! Form::label('cover', 'Cover image', ['class' => 'label']) !!}
-                {!! Form::file('cover', ['class' => 'file img']) !!}
+                | {!! Form::label('cover', 'Cover image', ['class' => 'label']) !!}
+                | {!! Form::file('cover', ['class' => 'file img']) !!}
             .group
-                {!! Form::label('twitter', 'Post to twitter', ['class' => 'label']) !!}
-                {!! Form::checkbox('twitter', 1, null, ['class' => 'onoffswitch']) !!}
+                | {!! Form::label('tags', 'Tags', ['class' => 'label']) !!}
+                | {!! Form::select('tags[]', ($tags ? $tags : null), null, ['class' => 'select2', 'multiple' => true]) !!}
             .group
-                {!! Form::select('age', ['Under 18', '19 to 30', 'Over 30'], null, ['class' => 'select']) !!}
+                | {!! Form::label('published_at', 'Publish date') !!}
+                | {!! Form::text('published_at', \Carbon\Carbon::now('America/Mexico_City')->format('d-m-Y h:m:s A'), ['data-field' => 'datetime', 'readonly' => true, 'class' => 'input']) !!}
+            .group
+                | {!! Form::label('twitter', 'Post to twitter', ['class' => 'label']) !!}
+                | {!! Form::checkbox('twitter', 1, null, ['class' => 'onoffswitch']) !!}
+                #dtBox
         | {!! Form::close() !!}
             

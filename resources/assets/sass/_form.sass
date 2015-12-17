@@ -47,7 +47,7 @@
                 line-height: rem(20px)
                 border: 2px solid $silver
                 border-radius: rem(20px)
-                background: white
+                background: $silver
                 transition: background-color 0.1s ease-in
                 &:before
                     content: ""
@@ -84,3 +84,21 @@
                 border-radius: rem(3px)
                 height: rem(34px)
                 -webkit-appearance: none
+
+// Select2
+
+.select2-container
+    width: 100%
+    &.select2-container--default
+        .select2-selection--multiple
+            border: 2px solid $silver
+            .select2-selection__choice
+                border: 1px solid $silver
+                background-color: $clouds
+                color: $dark
+                padding: 0.3em
+                .select2-selection__choice__remove
+                    color: $red
+        &.select2-container--focus
+            .select2-selection--multiple
+                border: 2px solid $blue
